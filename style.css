@@ -1,13 +1,53 @@
+:root {
+  --link-hover-gradient: linear-gradient(316deg, #ffe190 0%, #fa9e8c 74%);
+  --green-gradient: linear-gradient(
+    90deg,
+    rgb(0, 158, 119) 0%,
+    rgb(0, 153, 192) 100%,
+    rgb(2, 127, 255) 200%,
+    rgb(88, 86, 214) 300%,
+    rgb(29, 29, 31) 400%
+  );
+}
+
+
 body {
   font-family: "Bitter", serif;
   font-weight: 200;
+  background-color: rgb(21, 32, 43);
+  color: #fff;
 }
 
 h1 {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 .container {
-    max-width: 700px;
-    margin: 0 auto;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.croissant-navbar {
+  background-color: rgba(21, 32, 43, 0.6);
+  z-index: 99;
+  border-bottom: 1px solid rgb(56, 68, 77);
+}
+
+.contact-link {
+  background-image: var(--green-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  transition: transform 0.3s ease 0s, color 0.2s ease 0s;
+}
+
+.contact-link:hover {
+  background-image: var(--link-hover-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  transform: translateX(3px);
 }
